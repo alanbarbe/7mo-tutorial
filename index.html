@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Instalación de Sistema Operativo</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="index.html">Tutorial</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="#preparacion">Preparación</a></li>
+                <li class="nav-item"><a class="nav-link" href="#usb-booteable">Creación de USB Booteable</a></li>
+                <li class="nav-item"><a class="nav-link" href="#bios">Configuración del BIOS/UEFI</a></li>
+                <li class="nav-item"><a class="nav-link" href="#instalacion-windows">Instalación de Windows</a></li>
+                <li class="nav-item"><a class="nav-link" href="#post-instalacion">Post-Instalación</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <h1 class="text-center">Instalación de Sistema Operativo</h1>
+
+        <!-- Preparación -->
+        <section id="preparacion">
+            <h2>1. Preparación</h2>
+            <p>Verifica las especificaciones mínimas de hardware requeridas para la versión de Windows que deseas instalar. Por ejemplo, para Windows 11, necesitarás un procesador de 1GHz o más rápido con 2 o más núcleos, 4GB de RAM, 64GB de almacenamiento y una tarjeta gráfica compatible.</p>
+            <p>Conecta un teclado y mouse USB a tu notebook si no tiene este tipo de dispositivos integrados. Asegúrate de que funcionen correctamente.</p>
+            <p>Descarga la imagen ISO de Windows desde la página oficial de Microsoft. Hay diferentes ediciones (Home, Pro, etc.) así que elige la que necesites.</p>
+            <p>Consigue una unidad USB vacía con al menos 8GB de capacidad de almacenamiento. Es recomendable usar una unidad nueva o formatearla completamente.</p>
+            <p>Descarga e instala un programa para crear unidades USB booteable como Rufus. Este es gratuito y compatible con Windows.</p>
+            <p>Enlaces oficiales para descargar:</p>
+            <ul>
+                <li><a href="https://www.microsoft.com/es-es/software-download/windows11" target="_blank">Descargar ISO</a></li>
+                <li><a href="https://rufus.ie/es/" target="_blank">Descargar Rufus</a></li>
+            </ul>
+        </section>
+
+        <!-- Creación de USB Booteable -->
+        <section id="usb-booteable">
+            <h2>2. Creación de un USB Booteable</h2>
+            <p>Abre el programa Rufus una vez instalado.</p>
+            <p>En la opción "Dispositivo" selecciona tu unidad USB de al menos 8GB. Haz clic en "Seleccionar" y elige la imagen ISO de Windows que descargaste previamente.</p>
+            <p>En "Esquema de partición" es recomendable elegir "Tabla de Partición GPT" para unidades de 4GB o más grandes.</p>
+            <p>Bajo "Sistema de archivos", selecciona "NTFS" como formato para la unidad. Las demás opciones puedes dejarlas con la configuración por defecto.</p>
+            <p>Una vez revisada la configuración, haz clic en "Comenzar" para iniciar el proceso de creación de la unidad booteable.</p>
+            <p>Rufus mostrará una advertencia, haz clic en "Aceptar" para proceder. La copia de archivos a la unidad USB comenzará y puede tardar varios minutos dependiendo de tu equipo.</p>
+            <p>Una vez finalizado, Rufus mostrará un mensaje de "¡Listo!". Ahora tienes una unidad USB booteable con la imagen de instalación de Windows lista para usar.</p>
+        </section>
+
+        <!-- Configuración del BIOS/UEFI -->
+        <section id="bios">
+            <h2>3. Configuración del BIOS/UEFI</h2>
+            <p>Reinicia tu notebook.</p>
+            <p>Inmediatamente después de encender, presiona repetidamente la tecla de acceso al BIOS/UEFI. Las teclas más comunes son:</p>
+            <ul>
+                <li>F2 (para la mayoría de las marcas)</li>
+                <li>Del (para algunas marcas como Asus)</li>
+                <li>F10 (para HP)</li>
+                <li>Esc (para algunas Lenovo)</li>
+            </ul>
+            <p>Dentro del BIOS/UEFI, navega hasta el menú de arranque y cambia el orden de arranque para que la USB sea la primera opción.</p>
+            <p>Habilita el modo Legacy o UEFI según sea necesario.</p>
+            <p>Guarda los cambios y reinicia tu notebook para arrancar desde la USB.</p>
+        </section>
+
+        <!-- Instalación de Windows -->
+<section id="instalacion-windows">
+    <h2>4. Instalación de Windows</h2>
+    <p>Paso 1: Arranque desde USB</p>
+    <ul>
+        <li>Si configuraste correctamente el BIOS/UEFI, tu notebook arrancará desde el USB.</li>
+        <li>Verás un mensaje como "Press any key to boot from USB".</li>
+    </ul>
+    <p>Paso 2: Inicio de la instalación</p>
+    <ul>
+        <li>Aparecerá la pantalla de carga de Windows.</li>
+        <li>Selecciona tu idioma, formato de hora y método de entrada de teclado.</li>
+        <li>Haz clic en "Siguiente" y luego en "Instalar ahora".</li>
+    </ul>
+    <p>Paso 3: Clave de producto</p>
+    <ul>
+        <li>Si tienes una clave, ingrésala. Si no, selecciona "No tengo clave de producto".</li>
+    </ul>
+    <p>Paso 4: Selección de edición de Windows</p>
+    <ul>
+        <li>Elige la edición que corresponda a tu clave (si la ingresaste) o la que desees instalar.</li>
+    </ul>
+    <p>Paso 5: Aceptar términos de licencia</p>
+    <ul>
+        <li>Lee y acepta los términos de licencia.</li>
+    </ul>
+    <p>Paso 6: Tipo de instalación</p>
+    <ul>
+        <li>Selecciona "Personalizada: Instalar solo Windows (avanzado)".</li>
+    </ul>
+    <p>Paso 7: Selección y partición del disco</p>
+    <ul>
+        <li>Selecciona el disco donde instalarás Windows.</li>
+        <li>Si es necesario, crea nuevas particiones o formatea las existentes.</li>
+        <li>Selecciona la partición donde instalaremos Windows y haz clic en "Siguiente".</li>
+    </ul>
+    <p>Paso 8: Instalación</p>
+    <ul>
+        <li>Windows comenzará a copiar archivos e instalarse. Esto puede llevar varios minutos.</li>
+        <li>Tu notebook se reiniciará varias veces durante este proceso.</li>
+    </ul>
+    <p>Paso 9: Configuración inicial</p>
+    <ul>
+        <li>Elige tu región y disposición de teclado.</li>
+        <li>Configura tu cuenta de usuario (nombre y contraseña).</li>
+        <li>Decide sobre las opciones de privacidad (ubicación, diagnóstico, etc.).</li>
+    </ul>
+    <p>Paso 10: Finalización</p>
+    <ul>
+        <li>Windows terminará de configurarse y llegarás al escritorio.</li>
+    </ul>
+    <p>Paso 11: Instalación de controladores</p>
+    <ul>
+        <li>Ve a la página del fabricante de tu notebook y descarga los controladores más recientes.</li>
+        <li>Instala los controladores uno por uno, reiniciando cuando sea necesario.</li>
+    </ul>
+</section>
+
+
+        <!-- Post-Instalación -->
+        <section id="post-instalacion">
+            <h2>5. Post-Instalación y Configuración Adicional</h2>
+            <p>Paso 1: Actualizar Windows</p>
+            <ol>
+                <li>Abre el menú Inicio y ve a Configuración (icono de engranaje).</li>
+                <li>Selecciona "Actualización y seguridad".</li>
+                <li>Haz clic en "Windows Update" en el panel izquierdo.</li>
+                <li>Haz clic en "Buscar actualizaciones".</li>
+                <li>Si hay actualizaciones disponibles, Windows las descargará e instalará automáticamente.</li>
+                <li>Reinicia tu notebook cuando se te solicite para completar la instalación de las actualizaciones.</li>
+            </ol>
+            <p>Paso 2: Instalar controladores</p>
+            <ol>
+                <li>Método automático (Windows Update):
+                    <ul>
+                        <li>Windows generalmente instala controladores básicos automáticamente.</li>
+                        <li>Para buscar controladores adicionales, ve a Configuración > Actualización y seguridad > Windows Update > Opciones avanzadas > Opciones opcionales.</li>
+                        <li>Haz clic en "Ver actualizaciones opcionales" y busca actualizaciones de controladores.</li>
+                    </ul>
+                </li>
+                <li>Método manual (herramientas del fabricante):
+                    <ul>
+                        <li>Visita el sitio web oficial del fabricante de tu notebook.</li>
+                        <li>Busca la sección de soporte o descargas.</li>
+                        <li>Introduce el modelo exacto de tu notebook.</li>
+                        <li>Descarga e instala los controladores más recientes, especialmente para:
+                            <ul>
+                                <li>Tarjeta gráfica</li>
+                                <li>Chipset</li>
+                                <li>Red (Wi-Fi y Ethernet)</li>
+                                <li>Audio</li>
+                            </ul>
+                        </li>
+                        <li>Reinicia tu notebook después de instalar los controladores importantes.</li>
+                    </ul>
+                </li>
+            </ol>
+            <p>Paso 3: Instalar software esencial</p>
+            <ol>
+                <li>Navegador web:
+                    <ul>
+                        <li>Descarga e instala tu navegador preferido (Chrome, OperaGX, etc.)</li>
+                    </ul>
+                </li>
+                <li>Suite de oficina:
+                    <ul>
+                        <li>Instala Microsoft Office o una alternativa gratuita como LibreOffice.</li>
+                    </ul>
+                </li>
+                <li>Antivirus:
+                    <ul>
+                        <li>Windows incluye Windows Defender, pero si prefieres otra opción, instálala ahora.</li>
+                    </ul>
+                </li>
+                <li>Otros programas útiles:
+                    <ul>
+                        <li>Lector de PDF (Adobe Acrobat Reader o alternativas)</li>
+                        <li>Compresor de archivos (7-Zip, WinRAR)</li>
+                        <li>Reproductor multimedia (VLC)</li>
+                    </ul>
+                </li>
+            </ol>
+            <p>Paso 4: Optimizar el rendimiento</p>
+            <ol>
+                <li>Ajustar el plan de energía:
+                    <ul>
+                        <li>Ve a Panel de control > Sistema y seguridad > Opciones de energía.</li>
+                        <li>Selecciona "Alto rendimiento" o crea un plan personalizado.</li>
+                    </ul>
+                </li>
+                <li>Desactivar efectos visuales innecesarios:
+                    <ul>
+                        <li>Haz clic derecho en "Este equipo" > Propiedades > Configuración avanzada del sistema > Rendimiento > Configuración.</li>
+                        <li>Selecciona "Ajustar para obtener el mejor rendimiento" o personaliza según tus preferencias.</li>
+                    </ul>
+                </li>
+                <li>Desactivar programas de inicio:
+                    <ul>
+                        <li>Abre el Administrador de tareas (Ctrl + Shift + Esc).</li>
+                        <li>Ve a la pestaña "Inicio".</li>
+                        <li>Desactiva los programas que no necesites que se inicien con Windows.</li>
+                    </ul>
+                </li>
+                <li>Liberar espacio en disco:
+                    <ul>
+                        <li>Usa la herramienta Liberador de espacio en disco de Windows.</li>
+                        <li>Ve a Este equipo > haz clic derecho en el disco C: > Propiedades > Liberador de espacio en disco.</li>
+                    </ul>
+                </li>
+            </ol>
+            <p>Paso 5: Eliminar bloatware</p>
+            <ol>
+                <li>Desinstalar aplicaciones preinstaladas no deseadas:
+                    <ul>
+                        <li>Ve a Configuración > Aplicaciones > Aplicaciones y características.</li>
+                        <li>Revisa la lista de aplicaciones instaladas.</li>
+                        <li>Selecciona y desinstala las que no necesites.</li>
+                    </ul>
+                </li>
+                <li>Usar herramientas de limpieza (opcional):
+                    <ul>
+                        <li>Puedes usar programas como CCleaner o PC Decrapifier para eliminar bloatware de forma más exhaustiva.</li>
+                        <li>Ten cuidado al usar estas herramientas y asegúrate de no eliminar aplicaciones importantes.</li>
+                    </ul>
+                </li>
+                <li>Reinstalar aplicaciones útiles del fabricante:
+                    <ul>
+                        <li>Algunas aplicaciones preinstaladas pueden ser útiles (por ejemplo, para controlar el hardware específico de tu notebook).</li>
+                        <li>Si las eliminaste por error, puedes reinstalarlas desde el sitio web del fabricante.</li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
